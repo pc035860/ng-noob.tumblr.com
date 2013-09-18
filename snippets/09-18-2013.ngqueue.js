@@ -26,3 +26,51 @@ $http.get('/someUrl', {params: {taskId: 1}})
 .then(function () {
   console.log('工作順利完成！');
 });
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="http://pc035860.github.io/ngQueue/ngQueue.min.js"></script>
+
+
+angular.module('myApp', ['ngQueue']);
+
+
+// 建立同時執行兩件工作的 queue
+var queue = $queueFactory(2);
+
+
+queue.enqueue(function (inA, inB, inC) {
+
+  console.log(this);  // {name: "context"}
+
+  console.log(inA, inB, inC);  // hello world !
+
+  doSomething();
+
+}, {name: 'context'}, ['hello', 'world', '!']);
+
+
+// $timeout delay
+queue.enqueue(function () {
+  var dfd = $q.defer();
+
+  $timeout(function () {
+    dfd.resolve();
+    // or dfd.reject()
+  }, 100);
+
+  return dfd.promise;
+});
+
+// $http request
+queue.enqueue(function () {
+
+  return $http.get('/some/api/call')
+    .success(function () {
+      // do something if success
+    })
+    .error(function () {
+      // do something if error
+    });
+
+});
