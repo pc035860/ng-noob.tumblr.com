@@ -47,6 +47,7 @@ queue.enqueue(function (inA, inB, inC) {
 
   doSomething();
 
+// 傳入 context 以及 arguments
 }, {name: 'context'}, ['hello', 'world', '!']);
 
 
