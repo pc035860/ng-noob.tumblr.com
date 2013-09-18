@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <link data-require="bootstrap-css@3.0.0" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.1.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js" data-semver="1.1.5"></script>
+    <script src="app.js"></script>
+    <script src="submitIt.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <div class="container text-center">
+      <p>&nbsp;</p>
+      <button class="btn btn-primary" ng-click="submit = true">Take me to Google.com</button>
+    </div>
+    <form target="_top" submit-it="submit" si-method="get" si-action="http://www.google.com"></form>
+  </body>
+
+</html>

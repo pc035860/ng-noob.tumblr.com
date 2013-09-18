@@ -1,0 +1,8 @@
+{
+  "name": "AngularJS submitIt directive",
+  "description": "AngularJS submitIt directive",
+  "tags": ["angularjs", "form"],
+  "files": [
+  	"index.html", "app.js", "submitIt.js"
+  ]
+}
