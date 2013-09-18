@@ -1,0 +1,8 @@
+{
+  "name": "ngQueue demo",
+  "description": "ngQueue demo",
+  "tags": ["angularjs", "ngQueue"],
+  "files": [
+  	"index.html", "app.js", "style.css"
+  ]
+}
