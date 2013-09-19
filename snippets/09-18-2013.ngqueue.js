@@ -75,3 +75,24 @@ queue.enqueue(function () {
     });
 
 });
+
+
+var queue = $queueFactory(1),
+    taskIds = [1, 2, 3, 4, 5];
+
+angular.forEach(taskIds, function (taskId) {
+
+  // enqueue with argument: taskId
+  queue.enqueue(function (taskId) {
+
+    // returns $http promise
+    return $http.get('/someUrl', {params: {taskId: taskId}});
+
+  }, null, [taskId]);
+
+});
+
+queue.enqueue(function () {
+  // all tasks finished
+  console.log('工作順利完成！')
+});
