@@ -13,10 +13,10 @@ Install all required node packages (basically, grunt-related packages).
 npm install
 ```
 
-Change the browsable (main) directory in `Gruntfile.js`:
+Change the browsable (main) directory in `Gruntfile.js` (if you want):
 
 ```js
-var EXAMPLE_PATH = 'path/you/want';
+var ROOT_PATH = 'public';
 ```
 
 ### Run the server
