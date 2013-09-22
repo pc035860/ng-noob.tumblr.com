@@ -95,17 +95,6 @@
   }
 }
 
-@-ms-keyframes "ungrow" {
-  from {
-    height: 41px;
-    opacity: 1;
-  }
-  to {
-    height: 0px;
-    opacity: 0;
-  }
-}
-
 @-o-keyframes "ungrow" {
   from {
     height: 41px;
@@ -161,22 +150,6 @@
  }
  to {
    height: 41px;
-   opacity: 1;
- }
-
-}
-
-@-ms-keyframes "grow" {
- from {
-   height: 0px;
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
- }
- to {
-   height: 41px;
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
    opacity: 1;
  }
 
