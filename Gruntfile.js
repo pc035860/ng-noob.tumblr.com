@@ -1,4 +1,4 @@
-var EXAMPLE_PATH = 'examples';
+var ROOT_PATH = 'public';
 
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
@@ -8,7 +8,7 @@ var mountFolder = function (connect, dir) {
 
 module.exports = function(grunt) {
   grunt.initConfig({
-    appRoot: EXAMPLE_PATH,
+    appRoot: ROOT_PATH,
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       options: {
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
           middleware: function (connect) {
             return [
               lrSnippet,
-              mountFolder(connect, EXAMPLE_PATH),
-              connect.directory(EXAMPLE_PATH)
+              mountFolder(connect, ROOT_PATH),
+              connect.directory(ROOT_PATH)
             ];
           }
         }
