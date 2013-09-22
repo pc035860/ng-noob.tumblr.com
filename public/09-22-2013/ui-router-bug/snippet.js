@@ -1,8 +1,6 @@
-// jquery way
-$('form')[0].submit()
-
-// angular way?
-//   $document injectable
-$document.find('form')[0].submit();
-//   $element injectable
-$element.find('form')[0].submit();
+// inside angular app config
+$stateProvider
+  .state('route1', {
+    url: '/route1?this&is&a&test',
+    templateUrl: 'route1.html'
+  });
