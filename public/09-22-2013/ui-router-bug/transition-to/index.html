@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>ui-router transitionTo bug</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+  <!-- my custom build which have the bug fixed -->
+  <!-- script src="//pc035860.github.io/ui-router/build/angular-ui-router.min.js"></script -->
+
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+
+  <div class="container">
+    <div class="nav-container">
+      <ul class="nav nav-tabs">
+        <li ng-class="{'active': $state.includes('route1')}">
+          <a href="" ng-click="$state.transitionTo('route1', {d: 4, e: 5, f: 6}, false)">Route1</a>
+        </li>
+        <li ng-class="{'active': $state.includes('route2')}">
+          <a href="" ng-click="$state.transitionTo('route2', {a: 3, b: 2, c: 1}, false)">Route2</a>
+        </li>
+        <li ng-class="{'active': $state.includes('route1c')}">
+          <a href="" ng-click="$state.transitionTo('route1c', {d: 14, e: 15, f: 16}, {location: false})">Route1 (correct)</a>
+        </li>
+        <li ng-class="{'active': $state.includes('route2c')}">
+          <a href="" ng-click="$state.transitionTo('route2c', {a: 13, b: 12, c: 11}, {location: false})">Route2 (correct)</a>
+        </li>
+      </ul>
+    </div>
+    <div ui-view style="min-height: 300px;"></div>
+
+    <hr>
+
+    <div class="inspect">
+      <h3>location change log:</h3>
+      <pre>{{ locationChgLog }}</pre>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

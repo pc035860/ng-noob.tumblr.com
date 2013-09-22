@@ -1,0 +1,17 @@
+<div class="route">
+
+  <h2>{{ $state.current.data.routeName }}</h2>
+
+  <p ng-show="!$state.current.data.correct">
+    Switch between <code>Route1</code> and <code>Route2</code> with <code>$state.transitionTo('state', {}, false)</code> still causes location to change.
+  </p>
+  <p ng-show="$state.current.data.correct">
+    The correct version uses <code>$state.transitionTo('state', {}, {location: false})</code> demostrating the correct behavior - no location change.
+  </p>
+
+  <p>&nbsp;</p>
+
+  <h4>Parameters:</h4>
+  <pre>{{ params }}</pre>
+
+</div>

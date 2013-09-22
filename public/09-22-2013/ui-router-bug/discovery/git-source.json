@@ -1,0 +1,10 @@
+{
+  "name": "ui-router transitionTo bug discovery",
+  "description": "ui-router transitionTo bug discovery",
+  "tags": [
+    "angularjs", "ui-router", "bug"
+  ],
+  "files": [
+    "index.html", "route1.html", "route2.html", "app.js"
+  ]
+}

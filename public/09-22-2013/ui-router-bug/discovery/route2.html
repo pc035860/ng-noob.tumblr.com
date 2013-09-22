@@ -1,0 +1,16 @@
+<div class="route">
+
+  <h2>Route2</h2>
+
+  <p>
+    The link above for route2 is <code>#/route2?c=1&b=2&a=3</code>, which is different from the one setted in <code>app.js</code>. <br>
+    Then the <code>$state.transitionTo()</code> is triggered with third parameter <code>false</code>, meaning the state transition shouldn't change the location. <br>
+    As you can see below, <code>$locationChangeSuccess</code> triggers twice.
+  </p>
+
+  <p>&nbsp;</p>
+
+  <h4>Parameters:</h4>
+  <pre>{{ params }}</pre>
+
+</div>
