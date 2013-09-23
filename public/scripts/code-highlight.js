@@ -55,6 +55,9 @@ $(function () {
         $this.html('<pre><code></code></pre>');
         $this.find('code:first').text(code);
 
+        /**
+         * Language specified
+         */
         if (data.lang) {
           $this.find('pre:first').addClass('language-' + data.lang);
         }
