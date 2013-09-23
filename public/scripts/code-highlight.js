@@ -52,9 +52,8 @@ $(function () {
         code = code.replace(/‘|’/g, "'");
         code = code.replace(/“|”/g, '"');
 
-        console.log(code);
-
-        $this.html('<pre><code>' + code + '</code></pre>');
+        $this.html('<pre><code></code></pre>');
+        $this.find('code:first').text(code);
 
         if (data.lang) {
           $this.find('pre:first').addClass('language-' + data.lang);
