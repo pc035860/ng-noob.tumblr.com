@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>jqLite .css() setter/getter</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-init="model = {count: 0}">
+
+  <div class="container text-center">
+
+    <h3>Try to <code>click</code>, <code>mouseenter</code>, <code>mouseleave</code> the button.</h3>
+
+    <p style="margin-top: 20px;">
+      <button class="btn btn-danger"
+              bind-unbind="['click', 'mouseenter', 'mouseleave']"
+              bind-unbind-trigger="model.count = model.count + 1">Will work</button>
+      &nbsp; &nbsp;
+      Count: <strong class="lead">{{ model.count }}</strong>
+    </p>
+
+  </div>
+
+</body>
+</html>

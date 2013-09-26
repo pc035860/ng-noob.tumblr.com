@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>jqLite .css() setter/getter</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-init="model = {fontSize: 30}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h3>Change <code>font-size</code></h3>
+        <input id="chg-font-size" class="form-control" type="text" ng-model="model.fontSize">
+      </div>
+      <div class="col-xs-6">
+        <h3>Retrived <code>font-size</code></h3>
+        <pre><code>{{ model.getFontSize }}</code></pre>
+      </div>
+    </div>
+
+    <p class="result">
+      <span class="text-success" font-size-success="{{ model.fontSize }}">
+        <span get-font-size="model.getFontSize">Will change</span>
+      </span>
+      &nbsp;
+      <span class="text-danger" font-size-error="{{ model.fontSize }}">Won't change</span>
+    </p>
+
+  </div>
+
+</body>
+</html>

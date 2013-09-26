@@ -1,0 +1,10 @@
+{
+  "name": "jqLite so happy - .bind()/.unbind() behavior",
+  "description": "jqLite so happy - .bind()/.unbind() behavior",
+  "tags": [
+    "angularjs", "jqLite"
+  ],
+  "files": [
+    "index.html", "app.js"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "jqLite so happy - .css() setter/getter",
+  "description": "jqLite so happy - .css() setter/getter",
+  "tags": [
+    "angularjs", "jqLite"
+  ],
+  "files": [
+    "index.html", "app.js", "style.css"
+  ]
+}
