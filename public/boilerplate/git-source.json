@@ -1,0 +1,10 @@
+{
+  "name": "",
+  "description": "",
+  "tags": [
+    "angularjs"
+  ],
+  "files": [
+    "index.html", "app.js", "style.css"
+  ]
+}
