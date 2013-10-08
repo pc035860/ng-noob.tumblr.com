@@ -1,0 +1,22 @@
+<h3>首頁</h3>
+
+<p>試著按按看下面的按鈕</p>
+
+<p>&nbsp;</p>
+
+<div class="row">
+
+  <div ui-view></div>
+
+  <div class="col-md-6" ng-include="'btns.html'">
+  </div>
+  <div class="col-md-6">
+    <div class="output" ng-class="{'animate': $stateParams.animate == 1}">
+      <div class="block"
+           ng-class="['left-top', 'right-top', 'left-bottom', 'right-bottom'][$stateParams.pos]"
+           ng-cloak></div>
+    </div>
+  </div>
+
+</div>
+

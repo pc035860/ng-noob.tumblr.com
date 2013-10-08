@@ -1,0 +1,72 @@
+/** styles here **/
+
+ul.pos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 10px;
+}
+ul.pos li {
+  float: left;
+  margin-right: 5px;
+}
+ul.pos li .description {
+  line-height: 34px;
+}
+
+
+.output {
+  position: relative;
+  border: 1px solid #CCC;
+
+  border-radius: 5px;
+
+  width: 100%;
+  height: 400px;
+}
+
+.output .block {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  margin-left: 0;
+  margin-top: 0;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: #ff1d25;
+
+  border-radius: 5px;
+}
+
+.output.animate .block {
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.output .block.left-top {
+  left: 0; top: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+.output .block.right-top {
+  left: 100%; top: 0;
+  margin-left: -40px;
+  margin-top: 0;
+}
+.output .block.left-bottom {
+  left: 0; top: 100%;
+  margin-left: 0;
+  margin-top: -40px;
+}
+.output .block.right-bottom {
+  left: 100%; top: 100%;
+  margin-left: -40px;
+  margin-top: -40px;
+}
