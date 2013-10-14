@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+
+  <div class="container text-center">
+
+    <div ui-view></div>
+
+  </div>
+
+  <div id="dialog-overlay" ng-show="$state.includes('index.theater') || $stateParams.theater" ng-click="$state.go('index', {theater: null})" ng-cloak>
+    <div id="dialog" ng-click="$event.stopPropagation()">
+      <p class="main"
+         ng-class="{'no-1': $stateParams.theater, 'no-2': $state.includes('index.theater')}">{{ model.text }}</p>
+      <p class="hint text-muted"><small>點擊框外任意處關閉</small></p>
+    </div>
+  </div>
+
+</body>
+</html>

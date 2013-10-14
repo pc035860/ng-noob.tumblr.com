@@ -40,7 +40,7 @@ angular.module('myApp', ['ui.router'])
         routeName: 'Route2 (correct)',
         correct: true
       }
-    })
+    });
 
 })
 

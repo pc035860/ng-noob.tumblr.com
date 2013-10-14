@@ -7,7 +7,7 @@ angular.forEach(taskIds, function (taskId) {
 
 });
 
-console.log('工作順利完成！')
+console.log('工作順利完成！');
 
 
 $http.get('/someUrl', {params: {taskId: 1}})
@@ -28,8 +28,8 @@ $http.get('/someUrl', {params: {taskId: 1}})
 });
 
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-<script src="http://pc035860.github.io/ngQueue/ngQueue.min.js"></script>
+// <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+// <script src="http://pc035860.github.io/ngQueue/ngQueue.min.js"></script>
 
 
 angular.module('myApp', ['ngQueue']);
@@ -94,5 +94,5 @@ angular.forEach(taskIds, function (taskId) {
 
 queue.enqueue(function () {
   // all tasks finished
-  console.log('工作順利完成！')
+  console.log('工作順利完成！');
 });

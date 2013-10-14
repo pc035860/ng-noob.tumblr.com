@@ -1,0 +1,10 @@
+{
+  "name": "fun with ui-router part 1",
+  "description": "fun with ui-router part 1",
+  "tags": [
+    "angularjs", "ui-router"
+  ],
+  "files": [
+    "index.html", "app.js", "style.css", "home.html"
+  ]
+}

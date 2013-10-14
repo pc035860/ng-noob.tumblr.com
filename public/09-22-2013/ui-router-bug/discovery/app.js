@@ -14,7 +14,7 @@ angular.module('myApp', ['ui.router'])
     .state('route2', {
       url: '/route2?a&b&c',
       templateUrl: 'route2.html'
-    })
+    });
 
 })
 

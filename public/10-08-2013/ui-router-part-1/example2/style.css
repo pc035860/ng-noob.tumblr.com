@@ -1,0 +1,55 @@
+/** styles here **/
+
+.btn-wrap {
+  padding: 50px 0;
+}
+
+#dialog-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  bottom: 0; right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#dialog {
+  position: relative;
+
+  top: 50%; left: 50%;
+
+  margin-left: -250px;
+  margin-top: -150px;
+
+  width: 500px;
+  height: 300px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 5px 25px 4px rgba(0, 0, 0, 0.6);
+
+}
+
+#dialog .main {
+  font-size: 40px;
+  text-align: center;
+
+  color: #5f89ff;
+
+  line-height: 300px;
+}
+
+#dialog .main.no-1 {
+  color: rgb(50, 118, 177);
+}
+#dialog .main.no-2 {
+  color: rgb(71, 164, 71);
+}
+
+#dialog .hint {
+  text-align: right;
+  margin-top: -33px;
+  margin-right: 7px;
+}

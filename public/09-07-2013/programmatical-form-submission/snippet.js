@@ -1,5 +1,5 @@
 // jquery way
-$('form')[0].submit()
+$('form')[0].submit();
 
 // angular way?
 //   $document injectable
