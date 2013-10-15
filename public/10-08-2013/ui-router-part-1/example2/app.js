@@ -6,8 +6,7 @@ angular.module('myApp', ['ui.router'])
 
   $stateProvider
     .state('index', {
-      url: '/?theater',
-      templateUrl: 'home.html'
+      url: '/?theater'
     })
       .state('index.theater', {
         url: 'theater'

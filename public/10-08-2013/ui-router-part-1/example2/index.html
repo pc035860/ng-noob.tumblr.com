@@ -19,7 +19,18 @@
 
   <div class="container text-center">
 
-    <div ui-view></div>
+    <div class="btn-wrap row" ng-init="model.text = 'Hello World!'">
+      <p class="col-xs-12">
+        <input type="text" class="form-control" ng-model="model.text">
+      </p>
+      <p class="col-xs-6">
+        <a ui-sref="index({theater: 1})" class="btn btn-primary" ng-class="{active: $stateParams.theater}">顯示為對話框 1</a>
+      </p>
+      <p class="col-xs-6">
+        <a ui-sref="index.theater()" class="btn btn-success" ng-class="{active: $state.includes('index.theater')}">顯示為對話框 2</a>
+      </p>
+
+    </div>
 
   </div>
 
